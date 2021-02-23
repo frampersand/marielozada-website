@@ -1,0 +1,18 @@
+<header class="container-fluid margin-navbar" [ngStyle]="{'background-image': 'url(' + post.imagen + ')'}" [ngClass]="{'reportaje-heading': post.imagen}">
+  <div class="d-flex flex-center h-100 inside-box">
+    <div class="w-100">
+      <h1 class="text-center reportaje-title m-auto" [innerHTML]='post.title.rendered'></h1>
+    </div>
+  </div>
+</header>
+<div class="container pt-65 ml-reportaje">
+  <div class="row">
+    <app-loader *ngIf="!loaded"></app-loader>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="ml-reportaje-body">
+        <p class="ml-date"> {{ post.date_gmt | date }} </p>
+        <div class="ml-post-content" [innerHTML]='post.content.rendered'></div>
+      </div>
+    </div>
+  </div>
+</div>

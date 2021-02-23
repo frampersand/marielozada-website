@@ -1,0 +1,13 @@
+<div class="container padding-navbar ml-newsletter">
+  <div class="row justify-content-center">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-base" [ngClass]="{'btn-active': currentTab == 'subscribe'}" (click)="tabChange('subscribe')">Suscríbete</button>
+      <button type="button" class="btn btn-base" [ngClass]="{'btn-active': currentTab == 'previous'}" (click)="tabChange('previous')">Ediciones previas</button>
+    </div>
+  </div>
+
+    <app-newsletter-list *ngIf="currentTab == 'previous'"></app-newsletter-list>
+    <app-newsletter-subscribe *ngIf="currentTab == 'subscribe'"></app-newsletter-subscribe>
+
+
+</div>

@@ -1,0 +1,147 @@
+@media screen and (max-width: 768px) {
+  .padding-navbar {
+    padding-top: 105px !important;
+  }
+
+  .margin-navbar {
+    margin-top: 105px !important;
+  }
+
+  .navbar {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+
+    .navbar-brand {
+      margin: auto;
+    }
+
+    .navbar-collapse {
+      .navbar-nav {
+        flex-direction: row !important;
+        justify-content: center;
+
+        .nav-link {
+          width: 50%;
+          text-align: center;
+
+          &.active {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+    }
+  }
+
+  .ml-home {
+    padding-top: 45px;
+    .pic-container {
+      height: 50% !important;
+      padding-top: 60px;
+    }
+
+    .description-box {
+      padding: 2rem 25px;
+    }
+
+    ul {
+      text-align: center;
+      margin-top: 3rem;
+    }
+  }
+
+  .ml-reportajes {
+    .card-body {
+      cursor: pointer;
+      background-size: cover;
+      position: relative;
+      padding: 0px;
+
+      img {
+        width: 100%;
+      }
+
+      .card-overlay {
+        transition: opacity ease-in-out 0.4s;
+        opacity: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        display: flex;
+        align-items: center;
+      }
+
+      .card-title {
+        margin: auto;
+        color: white;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        background-color: white;
+        margin: auto;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        transition: width 0.4s ease-in-out;
+      }
+
+      .card-overlay {
+        opacity: 1;
+        transition: opacity ease-in-out 0.4s;
+      }
+
+      &:after {
+        transition: width 0.4s ease-in-out;
+        width: 90%;
+      }
+    }
+  }
+
+  .reportaje-heading {
+    .inside-box {
+      .reportaje-title {
+        width: 100%;
+        padding: 0px 10px;
+      }
+    }
+  }
+
+  .ml-reportajes {
+    padding-top: 142px !important;
+    .select-language {
+      top: 105px;
+    }
+  }
+
+  .ml-reportaje {
+    .ml-reportaje-body {
+      padding: 0px 25px;
+    }
+    .alignleft {
+      float: none;
+      padding-right: 0px;
+      margin-top: 0px;
+      margin-bottom: 1rem;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+
+    .alignright {
+      float: none;
+      padding-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 1rem;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

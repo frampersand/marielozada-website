@@ -1,0 +1,38 @@
+.ml-home {
+    font-family: 'Roboto', sans-serif;
+    h1.ml-main-title {
+        font-family: 'Lora', serif;
+        font-size: 45px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid gray;
+        width: 294px;
+    }
+    .main-pic {
+        //background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/FIENTWQEJC.jpg");
+        //background-image: url("../img/mariel-home-color.png");
+        background-image: url("../img/mariel-photo-home.png");
+        transition: filter 0.2s ease-in-out;
+        background-size: cover;
+        background-position-x: 70%;
+        background-position-y: 60%;
+        background-repeat: no-repeat;
+        &:hover {
+            transition: filter 0.2s ease-in-out;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+    }
+    .list-inline {
+        i {
+            color: #343a40 !important;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                transition: color 0.3s ease-in-out;
+                color: #e0cb37 !important
+            }
+        }
+    }
+    .description-box {
+        padding: 3rem 6rem 0;
+    }
+}

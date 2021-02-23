@@ -1,0 +1,11 @@
+
+.btn-base{
+  background-color: #FFF;
+  color: #225487;
+  &.btn-active{
+    background-color: #225487;
+    color: #FFF;
+  }
+}
+
+

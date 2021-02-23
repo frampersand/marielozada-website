@@ -1,0 +1,9 @@
+<div class="row justify-content-center">
+  <div class="col-md-7 col-xs-12">
+    <ul class="newsletter-list">
+      <li *ngFor="let item of newsletterList; index as i">
+        <a href="{{item.link}}"> {{ item.titulo }} </a>
+      </li>
+    </ul>
+  </div>
+</div>

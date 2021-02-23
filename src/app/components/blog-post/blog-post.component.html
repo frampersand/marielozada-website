@@ -1,0 +1,12 @@
+<div class="container padding-navbar ml-blog-post">
+  <div class="row justify-content-center">
+    <app-loader *ngIf="!loaded"></app-loader>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <h2 class="mt-4 post-title" [innerHTML]='post.title.rendered'></h2>
+      <p class="mb-4">{{ post.date_gmt | date }}</p>
+      <hr *ngIf="!post.imagen && loaded">
+      <img class="img-fluid mt-1 mb-2" [src]="post.imagen" alt="" *ngIf="post.imagen">
+      <p class="lead mt-4" [innerHTML]='post.content.rendered'></p>
+    </div>
+  </div>
+</div>

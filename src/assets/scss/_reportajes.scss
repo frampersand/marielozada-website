@@ -1,0 +1,86 @@
+.ml-reportajes {
+  padding-top: 102px;
+  .select-language {
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    z-index: 10;
+    padding-bottom: 5px;
+    background: #FFF;
+    .flags {
+      margin-right: 10px;
+      .flag {
+        height: auto;
+        width: 42px;
+        margin: 0 5px;
+        cursor: pointer;
+        float: left;
+        text-align: center;
+        border-radius: 4px;
+        &.active{
+          background-color: #9bde4e;
+        }
+        img{
+          width: 32px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .card-columns {
+    column-gap: 0;
+  }
+  .card {
+    margin-bottom: 0px;
+    border: 0px;
+  }
+  .card-body {
+    cursor: pointer;
+    background-size: cover;
+    position: relative;
+    padding: 0px;
+    img {
+      width: 100%;
+    }
+    .card-overlay {
+      transition: opacity ease-in-out 0.4s;
+      opacity: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(200, 200, 200, 0.9);
+      position: absolute;
+      display: flex;
+      align-items: center;
+    }
+    .card-title {
+      margin: auto;
+      color: white;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      background-color: white;
+      margin: auto;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      transition: width 0.4s ease-in-out;
+    }
+    &:hover {
+      .card-overlay {
+        opacity: 1;
+        transition: opacity ease-in-out 0.4s;
+      }
+      &:after {
+        transition: width 0.4s ease-in-out;
+        width: 90%;
+      }
+    }
+  }
+}

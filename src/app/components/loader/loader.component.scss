@@ -1,0 +1,55 @@
+$measure: 50px;
+$rotation-speed: 7s;
+
+body{
+  background-color: rebeccapurple;
+}
+.loader{
+  width: $measure;
+  height: $measure;
+  left: calc(50% - #{$measure / 2});
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - #{$measure / 2});
+  .planet{
+    width: $measure;
+    height: $measure;
+    background-color: white;
+    border-radius: 100%;
+    border: 3px solid black;
+  }
+  .ring{
+    position: absolute;
+    top: $measure / 3;
+    width: $measure * 2;
+    margin: auto;
+    height: $measure / 3;
+    left: calc(50% - #{$measure});
+    border-radius: 100%;
+    &.back{
+      z-index: -1;
+      border-top: 4px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+    }
+    &.front{
+      border-bottom: 5px solid black;
+    }
+    &.clockwise{
+      animation: rotate-cw $rotation-speed linear infinite;
+    }
+    &.counterclockwise{
+      animation: rotate-ccw $rotation-speed linear infinite;
+    }
+  }
+}
+@keyframes rotate-cw {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-ccw {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

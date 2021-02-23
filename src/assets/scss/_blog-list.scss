@@ -1,0 +1,13 @@
+.ml-blog-list{
+    hr{
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .post-box{
+        &:last-child{
+            hr{
+                display: none;
+            }
+        }
+    }
+}

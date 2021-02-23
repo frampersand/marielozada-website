@@ -1,0 +1,17 @@
+<div class="container padding-navbar ml-blog-list">
+  <div class="row justify-content-center">
+    <app-loader *ngIf="!loaded"></app-loader>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="post-box" *ngFor="let post of posts">
+        <h2 class="mt-4" [innerHTML]='post.title.rendered'></h2>
+        <p>{{ post.date_gmt | date }}</p>
+        <img class="img-fluid" [src]="post.imagen" alt="" *ngIf="post.imagen">
+        <p class="lead mt-4" [innerHTML]='post.excerpt.rendered'></p>
+        <p class="text-right mb-7">
+          <a [routerLink]="[ '/post', post.id] "> Leer post </a>
+        </p>
+        <hr class="separator">
+      </div>
+    </div>
+  </div>
+</div>
