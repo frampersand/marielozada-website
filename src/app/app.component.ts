@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
-
-import { WordpressService } from './services/wordpress.service';
+import { LanguageService } from './services/language';
+import { t } from './services/dictionary';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +8,18 @@ import { WordpressService } from './services/wordpress.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //posts$: Observable<any[]>;
+  get lang(): string {
+    return this.languageService.lang;
+  }
 
-  constructor(private wp: WordpressService, private activatedRoute: ActivatedRoute) {
-    //this.posts$ = this.wp.getPosts();
+  constructor(private languageService: LanguageService) {
+  }
+  
+  getWords(word){
+    return t(this.lang, word);
+  }
+
+  updateLang(lang){ 
+    this.languageService.update(lang);
   }
 }

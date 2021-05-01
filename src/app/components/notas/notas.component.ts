@@ -19,7 +19,6 @@ export class NotasComponent implements OnInit {
 		this.wpApiPosts.getList({'search' : 'categories=4'})
 		.toPromise()
 		.then( response => {
-			console.log(response);
 			let json: any = response.json();
 			this.posts = json;
 			this.loaded = true;

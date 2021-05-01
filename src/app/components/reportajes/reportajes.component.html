@@ -1,14 +1,8 @@
 <div class="container-fluid padding-navbar ml-reportajes">
-  <div *ngIf="loaded" class="row select-language">
-    <div class="flags">
-      <div class="flag" [ngClass]="{'active': language === 'es'}"> <img (click)="getReportajes('categories=4')" src="../../../assets//img/spanish-flag.png"></div>
-      <div class="flag" [ngClass]="{'active': language === 'en'}"> <img (click)="getReportajes('categories=7')" src="../../../assets//img/english-flag.png"></div>
-    </div>
-  </div>
   <div class="row">
     <app-loader *ngIf="!loaded"></app-loader>
     <div *ngIf="loaded" class="card-columns">
-      <div class="card" *ngFor="let reportaje of reportajes">
+      <div class="card" *ngFor="let reportaje of showing">
         <div class="card-body">
           <img alt="Reportaje" [src]="reportaje.imagen ? reportaje.imagen : 'https://via.placeholder.com/350x350'">
           <div class="card-overlay" [routerLink]="['/reportaje', reportaje.id]">

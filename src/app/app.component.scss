@@ -1,0 +1,37 @@
+.flags {
+    padding-left: 15px;
+    margin-left: 10px;
+    border-left: 1px solid #e8e8e8;
+    .flag {
+        height: auto;
+        width: 42px;
+        margin: 0 5px;
+        cursor: pointer;
+        float: left;
+        text-align: center;
+        border-radius: 4px;
+        &.active{
+        background-color: #9bde4e;
+        }
+        img{
+        width: 32px;
+        height: auto;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+    @media screen and (max-width: 400px) {
+        border: none;
+        .flag{
+            margin: 0;
+            img{
+                width: 25px;
+                height: auto;
+            }
+        }
+    }
+}

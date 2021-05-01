@@ -7,9 +7,13 @@
     <div class="navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!--<a class="nav-item nav-link" [routerLink]="['/notas']"> Notas </a>-->
-            <a class="nav-item nav-link" [routerLink]="['/reportajes']" routerLinkActive="active"> Trabajos </a>
-            <a class="nav-item nav-link" [routerLink]="['/blog']" routerLinkActive="active"> Blog </a>
+            <a class="nav-item nav-link" [routerLink]="['/reportajes']" routerLinkActive="active"> {{ getWords('trabajos') }} </a>
+            <!-- <a class="nav-item nav-link" [routerLink]="['/blog']" routerLinkActive="active"> Blog </a> -->
             <a class="nav-item nav-link" [routerLink]="['/newsletter']" routerLinkActive="active"> Newsletter </a>
+            <div class="flags">
+                <div class="flag" [ngClass]="{'active': lang === 'es'}"> <img (click)="updateLang('es')" src="../../../assets//img/spanish-flag.png"></div>
+                <div class="flag" [ngClass]="{'active': lang === 'en'}"> <img (click)="updateLang('en')" src="../../../assets//img/english-flag.png"></div>
+              </div>
         </div>
     </div>
 </nav>
