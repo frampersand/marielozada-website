@@ -20,6 +20,6 @@ export class NewsletterListComponent implements OnInit {
   }
 
   getPreviousNewsletters(): any {
-    return this.http.get('http://marielozada.com/mailchimp-info/');
+    return this.http.get('https://marielozada.com/mailchimp-info/');
   }
 }

@@ -32,7 +32,7 @@ export class ReportajesComponent implements OnInit {
 
   getReportajes(categories) {
     this.loaded = false;
-    this.wpApiPosts.getList({ 'search': 'categories=4,7' })
+    this.wpApiPosts.getList({ 'search': 'categories=4,7&per_page=100' })
       .toPromise()
       .then(response => {
         let json: any = response.json();

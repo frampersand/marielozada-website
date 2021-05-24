@@ -55,6 +55,5 @@ import { NewsletterSubscribeComponent } from './components/newsletter-subscribe/
 export class AppModule { }
 
 export function WpApiLoaderFactory(http: Http) {
-  //return new WpApiStaticLoader(http, 'https://marielozada.cf/wp/wp-json/wp/v2/', '');
-  return new WpApiStaticLoader(http, 'http://wp.marielozada.com/wp-json/wp/v2/', '');
+  return new WpApiStaticLoader(http, 'https://wp.marielozada.com/wp-json/wp/v2/', '');
   }
